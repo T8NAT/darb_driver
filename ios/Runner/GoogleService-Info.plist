@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>534364307070-ikciummnulvutttch2ugg801dgg28elp.apps.googleusercontent.com</string>
+	<string>534364307070-9tl9s16kh3jgas27d30ndr9l7pbpobs0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.534364307070-ikciummnulvutttch2ugg801dgg28elp</string>
+	<string>com.googleusercontent.apps.534364307070-9tl9s16kh3jgas27d30ndr9l7pbpobs0</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>534364307070-ki8ksipjrfle51kgdqcbqngkuss2tclh.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,11 +15,11 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.drb.driver</string>
+	<string>com.t8nat.drbdriver</string>
 	<key>PROJECT_ID</key>
 	<string>drb-sa</string>
 	<key>STORAGE_BUCKET</key>
-	<string>drb-sa.appspot.com</string>
+	<string>drb-sa.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:534364307070:ios:dd58cda32c0811a23e222f</string>
+	<string>1:534364307070:ios:432b9895239e5c363e222f</string>
 	<key>DATABASE_URL</key>
 	<string>https://drb-sa-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>

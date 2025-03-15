@@ -339,7 +339,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                                                               overflow: TextOverflow.ellipsis,
                                                                               style: GoogleFonts.almarai(
                                                                                 fontSize: media.width * twelve,
-                                                                                color: hintColor,
+                                                                                color: black,
                                                                               ),
                                                                             ),
                                                                           ),
@@ -578,7 +578,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                                     ['body']
                                                 .toString(),
                                         size: media.width * fourteen,
-                                        color: hintColor,
+                                        color: black,
                                       ),
                                       SizedBox(
                                         height: media.width * 0.05,

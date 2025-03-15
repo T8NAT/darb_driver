@@ -51,23 +51,22 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBnj0AjequQZY-eAIIyElNFc8OwWPQkkVw',
-    appId: '1:534364307070:android:30d6bd0b5b30ef0c3e222f',
+    appId: '1:534364307070:android:f11bf47d91cdd0963e222f',
     messagingSenderId: '534364307070',
     projectId: 'drb-sa',
     databaseURL: 'https://drb-sa-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'drb-sa.appspot.com',
+    storageBucket: 'drb-sa.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAYujFxuvyGKz3svHElMbYr5JyU_ROj6y8',
-    appId: '1:534364307070:ios:dd58cda32c0811a23e222f',
+    appId: '1:534364307070:ios:432b9895239e5c363e222f',
     messagingSenderId: '534364307070',
     projectId: 'drb-sa',
     databaseURL: 'https://drb-sa-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'drb-sa.appspot.com',
+    storageBucket: 'drb-sa.firebasestorage.app',
     androidClientId: '534364307070-ki8ksipjrfle51kgdqcbqngkuss2tclh.apps.googleusercontent.com',
-    iosClientId: '534364307070-ikciummnulvutttch2ugg801dgg28elp.apps.googleusercontent.com',
-    iosBundleId: 'com.drb.driver',
+    iosClientId: '534364307070-9tl9s16kh3jgas27d30ndr9l7pbpobs0.apps.googleusercontent.com',
+    iosBundleId: 'com.t8nat.drbdriver',
   );
-
 }

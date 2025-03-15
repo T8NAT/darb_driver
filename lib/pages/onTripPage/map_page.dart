@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 import 'dart:ui' as ui;
-import 'package:dash_bubble/dash_bubble.dart';
+// import 'package:dash_bubble/dash_bubble.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_driver/pages/login/landingpage.dart';
 import 'package:flutter_driver/pages/login/login.dart';
 import 'package:flutter_driver/pages/onTripPage/droplocation.dart';
+import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import 'package:geolocator/geolocator.dart' as geolocator;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
@@ -47,6 +48,7 @@ class Maps extends StatefulWidget {
 
 dynamic _center = const LatLng(41.4219057, -102.0840772);
 dynamic center;
+// dynamic         center = LatLng(24.7636, 46.6753);
 bool locationAllowed = false;
 
 List<Marker> myMarkers = [];
@@ -142,7 +144,7 @@ class _MapsState extends State<Maps>
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    DashBubble.instance.stopBubble();
+    FlutterOverlayWindow.closeOverlay();
     myMarkers = [];
     show = true;
     navigated = false;
@@ -292,7 +294,7 @@ class _MapsState extends State<Maps>
       isBackground = false;
     } else if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.inactive) {
-      DashBubble.instance.stopBubble();
+      FlutterOverlayWindow.closeOverlay();
       isBackground = true;
     }
   }
@@ -638,6 +640,7 @@ class _MapsState extends State<Maps>
           onlinebikeicon = BitmapDescriptor.fromBytes(onlinebikeicon1);
         }
 
+        // center = LatLng(24.7636, 46.6753);
         if (center == null) {
           var locs = await geolocator.Geolocator.getLastKnownPosition();
           if (locs != null) {
@@ -2456,7 +2459,7 @@ class _MapsState extends State<Maps>
                                                                             false) {
                                                                           if (pref.getBool('isOverlaypermission') != false &&
                                                                               Theme.of(context).platform == TargetPlatform.android) {
-                                                                            if (await DashBubble.instance.hasOverlayPermission() ==
+                                                                            if (await FlutterOverlayWindow.isPermissionGranted() ==
                                                                                 false) {
                                                                               setState(() {
                                                                                 isOverLayPermission = true;
@@ -7840,8 +7843,7 @@ class _MapsState extends State<Maps>
                                                             isOverLayPermission =
                                                                 false;
                                                           });
-                                                          DashBubble.instance
-                                                              .requestOverlayPermission();
+                                                          FlutterOverlayWindow.requestPermission();
                                                         },
                                                         child: MyText(
                                                           text: languages[

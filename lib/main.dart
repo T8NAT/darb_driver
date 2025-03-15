@@ -1,23 +1,27 @@
-import 'package:device_apps/device_apps.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:workmanager/workmanager.dart';
 import 'functions/functions.dart';
 import 'functions/notifications.dart';
 import 'pages/loadingPage/loadingpage.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:bubble_head/bubble.dart';
+import 'package:appcheck/appcheck.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'dart:io';
 
 @pragma('vm:entry-point')
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   if (message.data['push_type'].toString() == 'meta-request') {
-    // print('iuhthtgtr');
-    DeviceApps.openApp('project.name.here');
+    final appCheck = AppCheck();
+    try {
+      await appCheck.launchApp('project.name.here');
+    } catch (e) {
+      print('Error launching app: $e');
+    }
   }
 }
 
@@ -78,11 +82,14 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     super.initState();
   }
 
-  final Bubble _bubble =
-      Bubble(showCloseButton: false, allowDragToClose: false);
   Future<void> startBubbleHead() async {
     try {
-      await _bubble.startBubbleHead(sendAppToBackground: false);
+      await FlutterOverlayWindow.showOverlay(
+        enableDrag: true,
+        overlayTitle: "Bubble",
+        overlayContent: "Floating Bubble",
+        positionGravity: PositionGravity.auto,
+      );
     } on PlatformException {
       debugPrint('Failed to call startBubbleHead');
     }
@@ -90,7 +97,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   Future<void> stopBubbleHead() async {
     try {
-      await _bubble.stopBubbleHead();
+      await FlutterOverlayWindow.closeOverlay();
     } on PlatformException {
       debugPrint('Failed to call stopBubbleHead');
     }

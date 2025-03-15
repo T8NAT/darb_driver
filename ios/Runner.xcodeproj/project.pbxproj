@@ -489,12 +489,13 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = C36L98NT37;
+				DEVELOPMENT_TEAM = WJG6K68J2D;
 				ENABLE_BITCODE = NO;
 				FLUTTER_BUILD_NAME = 1.0.4;
 				INFOPLIST_FILE = Runner/Info.plist;
@@ -505,7 +506,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.7.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drb.driver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t8nat.drbdriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -681,12 +682,13 @@
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = C36L98NT37;
+				DEVELOPMENT_TEAM = WJG6K68J2D;
 				ENABLE_BITCODE = NO;
 				FLUTTER_BUILD_NAME = 1.0.4;
 				INFOPLIST_FILE = Runner/Info.plist;
@@ -697,7 +699,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.7.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drb.driver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t8nat.drbdriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -717,12 +719,13 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = C36L98NT37;
+				DEVELOPMENT_TEAM = WJG6K68J2D;
 				ENABLE_BITCODE = NO;
 				FLUTTER_BUILD_NAME = 1.0.4;
 				INFOPLIST_FILE = Runner/Info.plist;
@@ -733,7 +736,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.7.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.drb.driver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t8nat.drbdriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

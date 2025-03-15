@@ -3,7 +3,7 @@
     "project_number": "534364307070",
     "firebase_url": "https://drb-sa-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "drb-sa",
-    "storage_bucket": "drb-sa.appspot.com"
+    "storage_bucket": "drb-sa.firebasestorage.app"
   },
   "client": [
     {
@@ -66,6 +66,42 @@
             "certificate_hash": "486dd35f650ed057f8342a4f498ac31c8a9f9996"
           }
         },
+        {
+          "client_id": "534364307070-fto7jblrbp2bmu41ojt3imk5b611mmhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnj0AjequQZY-eAIIyElNFc8OwWPQkkVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534364307070-fto7jblrbp2bmu41ojt3imk5b611mmhd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "534364307070-ikciummnulvutttch2ugg801dgg28elp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.drb.driver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534364307070:android:f11bf47d91cdd0963e222f",
+        "android_client_info": {
+          "package_name": "com.t8nat.drbdriver"
+        }
+      },
+      "oauth_client": [
         {
           "client_id": "534364307070-fto7jblrbp2bmu41ojt3imk5b611mmhd.apps.googleusercontent.com",
           "client_type": 3

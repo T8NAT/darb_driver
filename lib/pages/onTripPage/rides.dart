@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:dash_bubble/dash_bubble.dart';
+// import 'package:dash_bubble/dash_bubble.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_driver/pages/login/login.dart';
+import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart' as geolocator;
@@ -56,7 +57,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    DashBubble.instance.stopBubble();
+    FlutterOverlayWindow.closeOverlay();
 
     if (userDetails['vehicle_types'] != [] && userDetails['role'] != 'owner') {
       setState(() {
@@ -75,7 +76,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
       isBackground = false;
     } else if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.inactive) {
-      DashBubble.instance.stopBubble();
+      FlutterOverlayWindow.closeOverlay();
       isBackground = true;
     }
   }
@@ -366,9 +367,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                                                                     .platform ==
                                                                 TargetPlatform
                                                                     .android) {
-                                                          if (await DashBubble
-                                                                  .instance
-                                                                  .hasOverlayPermission() ==
+                                                          if (await FlutterOverlayWindow.isPermissionGranted() ==
                                                               false) {
                                                             setState(() {
                                                               isOverLayPermission =
@@ -2776,8 +2775,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                                                           isOverLayPermission =
                                                               false;
                                                         });
-                                                        DashBubble.instance
-                                                            .requestOverlayPermission();
+                                                        FlutterOverlayWindow.requestPermission();
                                                       },
                                                       child: MyText(
                                                         text: languages[

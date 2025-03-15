@@ -5260,6 +5260,12 @@ getOwnermodule() async {
 sendOTPtoMobile(String mobile, String countryCode) async {
   print('====== sendOTPtoMobile =====');
   dynamic result;
+
+  if (mobile.startsWith('5')) {
+    mobile = '0$mobile';
+    print('Mobile number after removing leading 0: $mobile');
+  }
+
   try {
     print('sendOTPtoMobilesendOTPtoMobile ${mobile} $countryCode');
 
@@ -5311,6 +5317,12 @@ validateSmsOtp(String mobile, String otp) async {
   print('mobile => $mobile');
   print('otp => $otp');
   dynamic result;
+
+  if (mobile.startsWith('5')) {
+    mobile = '0$mobile';
+    print('Mobile number after removing leading 0: $mobile');
+  }
+
   try {
     // Validate mobile and OTP
     if (mobile.isEmpty || otp.isEmpty) {
